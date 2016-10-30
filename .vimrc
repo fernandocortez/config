@@ -6,8 +6,11 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive' "git wrapper
 Plug 'bling/vim-airline'
 Plug 'scrooloose/syntastic'
+Plug 'joshdick/onedark.vim'
+
 Plug 'isruslan/vim-es6'
 Plug 'eslint/eslint'
+
 Plug 'leafgarland/typescript-vim'
 Plug 'palantir/tslint'
 
@@ -33,6 +36,10 @@ set wildmenu
 if has("win32") || has("win64")
   set gfn=Consolas:h12:cANSI:qDRAFT "Windows font styling
 endif
+
+" Atom One Dark theme
+let g:onedark_termcolors=16
+colorscheme onedark
 
 " NERDTree Settings
 map <F2> :NERDTreeToggle<CR> "toggle NERDTree with F2 key
