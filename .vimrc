@@ -30,17 +30,12 @@ set path+=**
 " Display all matching files when we tab complete
 set wildmenu
 
-set gfn=Consolas:h12:cANSI:qDRAFT "Windows font styling
+if has("win32") || has("win64")
+  set gfn=Consolas:h12:cANSI:qDRAFT "Windows font styling
+endif
 
 " NERDTree Settings
-map <F2> :NERDTreeToggle<CR>
-
-"start NERDTree if no files specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-"close vim w/ NERDTree if no other windows are open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+map <F2> :NERDTreeToggle<CR> "toggle NERDTree with F2 key
 
 " Syntastic Settings
 set statusline+=%#warningmsg#
@@ -54,10 +49,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
-"let g:syntastic_error_symbol = '❌'
-"let g:syntastic_style_error_symbol = '⁉️'
-"let g:syntastic_warning_symbol = '⚠️'
-"let g:syntastic_style_warning_symbol = '💩'
+if has("unix")
+  let g:syntastic_error_symbol = '❌'
+  let g:syntastic_style_error_symbol = '⁉️'
+  let g:syntastic_warning_symbol = '⚠️'
+  let g:syntastic_style_warning_symbol = '💩'
+endif
 
 highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
