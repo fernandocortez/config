@@ -23,11 +23,18 @@ call plug#end()
 set nocompatible "tells vim not to pretend to be vi
 let mapleader="," "mapping leader key to comma
 
-syntax enable
+syntax enable "enable syntax processing
 filetype plugin on
 
+" Editor Setting
 set number "show abosolute line number
 set relativenumber "show line numbers relative to current line
+set cursorline "highlight current line
+set showmatch "highlight matching [()]
+
+set tabstop=2 "number of visual spaces per TAB
+set softtabstop=2 "number of spaces in tab when editing
+set expandtab "tabs are spaces
 
 " Search down into subfolders
   " Provides tab-completion for all file-related tasks
