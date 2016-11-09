@@ -2,15 +2,16 @@
 call plug#begin()
 
 Plug 'sheerun/vim-polyglot' "support for many languages
-Plug 'elmcast/elm-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive' "git wrapper
 Plug 'bling/vim-airline' "status/tabline for vim
 Plug 'scrooloose/syntastic' "syntax checking
 Plug 'joshdick/onedark.vim' "Atom's One Dark theme
 
+Plug 'elmcast/elm-vim'
+
 Plug 'isruslan/vim-es6'
-Plug 'eslint/eslint'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'palantir/tslint'
@@ -18,9 +19,9 @@ Plug 'palantir/tslint'
 call plug#end()
 " }}}
 
-
 " SETTINGS
 set nocompatible "tells vim not to pretend to be vi
+let mapleader="," "mapping leader key to comma
 
 set lazyredraw "redraw only when needed to
 syntax enable "enable syntax processing
@@ -74,7 +75,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
@@ -94,3 +95,4 @@ highlight link SyntasticStyleWarningSign SignColumn
 
 " Elm settings
 let g:elm_format_autosave = 1 "format Elm file on save
+let g:elm_syntastic_show_warnings = 1
