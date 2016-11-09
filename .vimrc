@@ -2,6 +2,7 @@
 call plug#begin()
 
 Plug 'elmcast/elm-vim'
+
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive' "git wrapper
 Plug 'bling/vim-airline'
@@ -9,7 +10,7 @@ Plug 'scrooloose/syntastic'
 Plug 'joshdick/onedark.vim'
 
 Plug 'isruslan/vim-es6'
-Plug 'eslint/eslint'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'palantir/tslint'
