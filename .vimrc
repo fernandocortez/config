@@ -1,13 +1,13 @@
 " Plugins {{{
 call plug#begin()
 
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' "support for many languages
 Plug 'elmcast/elm-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive' "git wrapper
-Plug 'bling/vim-airline'
-Plug 'scrooloose/syntastic'
-Plug 'joshdick/onedark.vim'
+Plug 'bling/vim-airline' "status/tabline for vim
+Plug 'scrooloose/syntastic' "syntax checking
+Plug 'joshdick/onedark.vim' "Atom's One Dark theme
 
 Plug 'isruslan/vim-es6'
 Plug 'eslint/eslint'
@@ -27,8 +27,6 @@ syntax enable "enable syntax processing
 filetype indent on "load filetype-specific indent files
 filetype plugin on
 
-set incsearch "search as characters are entered
-set hlsearch "highlight matches
 
 " Editor Setting
 set number "show abosolute line number
@@ -42,6 +40,9 @@ set softtabstop=2 "number of spaces in tab when editing
 set expandtab "tabs are spaces
 
 " Search down into subfolders
+set incsearch "search as characters are entered
+set hlsearch "highlight matches
+  
   " Provides tab-completion for all file-related tasks
   set path+=**
 
