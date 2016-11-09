@@ -23,12 +23,15 @@ call plug#end()
 set nocompatible "tells vim not to pretend to be vi
 let mapleader="," "mapping leader key to comma
 
+set lazyredraw "redraw only when needed to
 syntax enable "enable syntax processing
+filetype indent on "load filetype-specific indent files
 filetype plugin on
 
 " Editor Setting
 set number "show abosolute line number
 set relativenumber "show line numbers relative to current line
+set showcmd "show command in bottom bar
 set cursorline "highlight current line
 set showmatch "highlight matching [()]
 
@@ -37,6 +40,9 @@ set softtabstop=2 "number of spaces in tab when editing
 set expandtab "tabs are spaces
 
 " Search down into subfolders
+set incsearch "search as characters are entered
+set hlsearch "highlight matches
+
   " Provides tab-completion for all file-related tasks
   set path+=**
 
