@@ -3,11 +3,12 @@ call plug#begin()
 
 Plug 'elmcast/elm-vim'
 
+Plug 'sheerun/vim-polyglot' "support for many languages
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive' "git wrapper
-Plug 'bling/vim-airline'
-Plug 'scrooloose/syntastic'
-Plug 'joshdick/onedark.vim'
+Plug 'bling/vim-airline' "status/tabline for vim
+Plug 'scrooloose/syntastic' "syntax checking
+Plug 'joshdick/onedark.vim' "Atom's One Dark theme
 
 Plug 'isruslan/vim-es6'
 Plug 'mtscout6/syntastic-local-eslint.vim'
@@ -20,6 +21,7 @@ call plug#end()
 
 " SETTINGS
 set nocompatible "tells vim not to pretend to be vi
+let mapleader="," "mapping leader key to comma
 
 syntax enable
 filetype plugin on
