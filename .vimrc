@@ -13,9 +13,6 @@ Plug 'joshdick/onedark.vim' "Atom's One Dark theme
 Plug 'isruslan/vim-es6'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
-Plug 'leafgarland/typescript-vim'
-Plug 'palantir/tslint'
-
 call plug#end()
 
 
