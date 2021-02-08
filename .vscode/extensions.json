@@ -2,7 +2,6 @@
   "recommendations": [
     "formulahendry.auto-close-tag",
     "coenraads.bracket-pair-colorizer",
-    "peterjausovec.vscode-docker",
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
     "donjayamanne.githistory",
@@ -13,12 +12,10 @@
     "eg2.vscode-npm-script",
     "christian-kohler.npm-intellisense",
     "esbenp.prettier-vscode",
-    "shinnn.stylelint",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "vscode-icons-team.vscode-icons",
     "jpoissonnier.vscode-styled-components",
     "redhat.vscode-yaml"
   ],
-
   "unwantedRecommendations": []
 }
